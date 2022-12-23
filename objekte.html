@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="module" src="JScode.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <!--<link rel="stylesheet" href="external2/bootstrap.css">-->
+    <!--<link rel="stylesheet" href="external2/bootstrap.css.map">-->
+    <!--  <link rel="stylesheet" href="materialize/css">-->
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css" />
+
+    <title>Museum</title>
+    <script src="JScode.js"></script>
+    <style>
+        body {
+            background-color: #FFFFE0;
+            color: #000000;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="row">
+
+            <img src="img/pexels-blue-arauz-14546017.png" width="100%" height="600px" alt="Arauz">
+
+        </div>
+
+
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">logo</a>
+                <a href="#" data-target="mobile-nav-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <!--Das Menu in der Desktop Ansicht-->
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="impressum.html">Impressum</a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+
+
+    </div>
+
+    <main id="VG-APP">
+        <div class="container ">
+            <div class="row">
+                <div class="col s12">
+                    <h1 class="center-align" id="main-h1-header">Finde Dein Objekt</h1>
+                </div>
+            </div>
+            <!--_____________________________________________________________________________________-->
+            <div class="row ">
+                <div class="input-field col s5 offset-s3 ">
+                    <input placeholder="Finde Dein Objekt" id="O21-Suche" type="text" class="validate">
+                    <label for="O21-Suche">Objektsuche</label>
+                </div>
+                <div id="btn_find_object" class="col s1 ">
+                    <a class="btn-floating pulse blau21"><i class="material-icons">search</i></a>
+                </div>
+            </div>
+            <!--Ein leerer Container für unsere Suchergebnisse-->
+            <div id="search_results" class="row"></div>
+
+            <!-- Ein Alternativer Ansatz. Wir erstellen nicht den HTML-Code im 
+                JavaScript sondern legen uns in der Index.html ein HTML-Template an, 
+                dass wir mittels JavaScript verwenden -->
+            <div id="o21_list" class="row hide">
+                <div id="o21_html_template" class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img id="card_img" src="13 MD21VGimg/logo_einfach_500x500.png" alt="">
+                            <span id="card_title" class="card-title">Der Titel der Card</span>
+                        </div>
+                        <div class="card-content">
+                            <h2 id="card_header">Eine einfache Karte</h2>
+                            <p id="card_fullDescription">hier können wir beliebigen Text einfügen</p>
+                            <p>Urheber</p>
+                            <p>Institut</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">Der Link zu dem Objekt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+                <div class="row  brown lighten-2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col l6 s12">
+                                <h5 class="white-text">Name des Museums</h5>
+                                <p class="grey-text text-lighten-4">Beschreibung des Museums.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col s4"> © 2022</div>
+                            <div class="col s4 offset-s4">
+                                <a class="grey-text text-lighten-4 right" href="index.html">Zurück</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </main>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+        $(function() {
+            $(".collection-item").load("impressum.html");
+            $(".collection-item").load("index.html");
+        });
+    </script>
+</body>
+
+</html>
